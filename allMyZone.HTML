@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Personal Blog</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
+  🌙
+</button>
+
+<nav class="container-fluid">
+  <ul>
+    <li><strong>ALL MY ZONE</strong></li>
+  </ul>
+  <ul class="nav-menu" id="navMenu">
+    <li><a href="#about">About</a></li>
+    <li><a href="#posts">Posts</a></li>
+    <li><a href="#subscribe" role="button">Subscribe</a></li>
+  </ul>
+  <ul>
+    <li><button class="mobile-nav-toggle" id="mobileNavToggle">☰</button></li>
+  </ul>
+</nav>
+
+<main class="container">
+  <div class="grid">
+    <section>
+      <hgroup>
+        <h2>Welcome to All My Zone</h2>
+        <h3>Thoughts, stories, and ideas</h3>
+      </hgroup>
+      <p>Grab a coffee and stay a while—this is where I share my personal journey, projects, and reflections.</p>
+      <figure>
+        <img src="https://images.unsplash.com/photo-1522199710521-72d69614c702?auto=format&fit=crop&w=1650&q=80" alt="Cozy writing desk" />
+        <figcaption><a href="https://unsplash.com/photos/Rgf3l3ZvlwI" target="_blank">Image via Unsplash</a></figcaption>
+      </figure>
+
+      <h3 id="about">About Me</h3>
+      <p>I'm a passionate writer, developer, and lifelong learner. This blog is my digital notebook and creative playground where I explore technology, share insights, and document my journey in software development.</p>
+
+      <figure>
+        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1650&q=80" alt="Creative workspace" />
+        <figcaption><a href="https://unsplash.com/photos/MYbhN8KaaEc" target="_blank">Image via Unsplash</a></figcaption>
+      </figure>
+
+      <h3 id="posts">Latest Posts</h3>
+
+      <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search posts..." aria-label="Search blog posts" />
+      </div>
+
+      <div id="blogPosts">
+        <article class="blog-post" data-tags="javascript web-development tutorial">
+          <h4>Getting Started with Modern JavaScript</h4>
+          <div class="meta">January 15, 2024 • 5 min read</div>
+          <p>Dive into the latest JavaScript features including async/await, destructuring, and modules. This comprehensive guide covers everything you need to modernize your JavaScript workflow.</p>
+          <div class="tags">
+            <span class="tag">JavaScript</span>
+            <span class="tag">Web Development</span>
+            <span class="tag">Tutorial</span>
+          </div>
+        </article>
+
+        <article class="blog-post" data-tags="productivity workflow tips">
+          <h4>Building a Productive Development Workflow</h4>
+          <div class="meta">January 10, 2024 • 7 min read</div>
+          <p>Learn how I optimized my daily coding routine with the right tools, shortcuts, and habits. From IDE setup to project management, discover techniques that can boost your productivity.</p>
+          <div class="tags">
+            <span class="tag">Productivity</span>
+            <span class="tag">Workflow</span>
+            <span class="tag">Tips</span>
+          </div>
+        </article>
+
+        <article class="blog-post" data-tags="react frontend development">
+          <h4>React Hooks: Beyond useState and useEffect</h4>
+          <div class="meta">January 5, 2024 • 6 min read</div>
+          <p>Explore advanced React hooks like useReducer, useContext, and custom hooks. Learn when and how to use them to write cleaner, more maintainable React applications.</p>
+          <div class="tags">
+            <span class="tag">React</span>
+            <span class="tag">Frontend</span>
+            <span class="tag">Development</span>
+          </div>
+        </article>
+
+        <article class="blog-post" data-tags="career growth reflection">
+          <h4>Lessons Learned in My First Year as a Developer</h4>
+          <div class="meta">December 28, 2023 • 8 min read</div>
+          <p>Reflecting on the challenges, victories, and unexpected discoveries from my first year in professional software development. What I wish I knew when I started.</p>
+          <div class="tags">
+            <span class="tag">Career</span>
+            <span class="tag">Growth</span>
+            <span class="tag">Reflection</span>
+          </div>
+        </article>
+
+        <article class="blog-post" data-tags="css design ui">
+          <h4>Creating Beautiful UIs with Modern CSS</h4>
+          <div class="meta">December 20, 2023 • 4 min read</div>
+          <p>Master CSS Grid, Flexbox, and custom properties to create stunning user interfaces. Practical examples and techniques for modern web design.</p>
+          <div class="tags">
+            <span class="tag">CSS</span>
+            <span class="tag">Design</span>
+            <span class="tag">UI</span>
+          </div>
+        </article>
+      </div>
+
+      <figure>
+        <img src="https://images.unsplash.com/photo-1580894732444-8ecded795da0?auto=format&fit=crop&w=1650&q=80" alt="Reading scene" />
+        <figcaption><a href="https://unsplash.com/photos/c9FQyqIECds" target="_blank">Image via Unsplash</a></figcaption>
+      </figure>
+
+    </section>
+  </div>
+</main>
+
+<section aria-label="Subscribe example" id="subscribe">
+  <div class="container">
+    <article>
+      <hgroup>
+        <h2>Subscribe to My Blog</h2>
+        <h3>Get new posts delivered straight to your inbox</h3>
+      </hgroup>
+      <form class="grid">
+        <input type="text" id="firstname" name="firstname" placeholder="Your first name" aria-label="First name" required />
+        <input type="email" id="email" name="email" placeholder="Your email" aria-label="Email address" required />
+        <button type="submit" onclick="event.preventDefault()">Subscribe</button>
+      </form>
+    </article>
+  </div>
+</section>
+
+<footer class="container">
+  <small><a href="#">Privacy Policy</a> • <a href="#contact">Contact</a></small>
+    <section id="contact">
+        <h5>Contact Us</h5>
+        <form>
+            <input type="text" id="contact-name" name="contact-name" placeholder="Your Name" required>
+            <input type="email" id="contact-email" name="contact-email" placeholder="Your Email" required>
+            <textarea id="contact-message" name="contact-message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
+```Here's the complete modified code with functional contact form, social media links (placeholders), and reading time estimator:
